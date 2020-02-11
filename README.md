@@ -1,4 +1,3 @@
-
 # ION - Incredible Object Notation #
 
 ### What is ION? ###
