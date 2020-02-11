@@ -12,12 +12,10 @@ ION is an alternative to JSON providing smaller message sizes and faster seriali
 * Add using IONConvert;
 * To serialize simply use: 
 ```
-#!c#
 byte[] ion = ION.SerializeObject(model, structureParity: false, compression: false);
 ```
 * To deserialize simply use:
 ```
-#!c#
  Model model = ION.DeserializeObject<Model>(modelbytes, structureParity: false, compression: false);
 ```
 
@@ -40,13 +38,9 @@ Compared to JSON, tests show a serialization speed increase of 2286% and a deser
 * GZIP Compression (Still faster than JSON)
 * And continually adding more!
 
-### Future ###
-
-I have set up the basics, and ION is still in early development stages today (21/06/2017), but I have very ambitious plans for it and believe it has some very useful applications. Especially where flexibility can be compromised for speed and size. Proposed features are kept in the issue tracker.
-
 ### Limitations ###
 
-Of course, speed and size advantages introduces some limitations. Great power comes with great responsibility! For example, changing the order of fields and properties in a model breaks deserialization in clients. This can however of course be overcome. ION comes with parity check as standard which can be enabled at a cost of 64 bytes per message, to make sure messages are deserialized with the same models.
+Of course, speed and size advantages introduces some limitations. With great power comes with great responsibility! For example, changing the order of fields and properties in a model breaks deserialization in clients. This can however of course be overcome. ION comes with parity check as standard which can be enabled at a cost of 64 bytes per message, to make sure messages are deserialized with the same models.
 
 ### Contact ###
 
